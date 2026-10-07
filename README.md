@@ -2,11 +2,11 @@
 
 ## Overview
 
-The Product Warranty & Service Claim Management System is a Java-based desktop application designed to manage product registration, warranty information, customer service claims, and repair scheduling.
+The Product Warranty & Service Claim Management System is a Java-based desktop application developed to manage product registration, warranty information, customer service claims, and repair scheduling.
 
-The system provides a centralized workflow for registering products, tracking warranty periods, creating service claims, scheduling repairs, searching records, and managing service information through a Java Swing graphical user interface.
+The application provides a simple Java Swing interface through which products can be registered, warranty information can be tracked, service claims can be created, repairs can be scheduled, and records can be searched and managed.
 
-The project demonstrates core Java programming concepts including object-oriented programming, abstraction, inheritance, method overriding, collections, CRUD operations, searching, sorting, exception handling, validation, and GUI development.
+The project demonstrates important Java programming concepts including Object-Oriented Programming, abstraction, inheritance, method overriding, collections, CRUD operations, searching, sorting, exception handling, input validation, and Java Swing GUI development.
 
 ## Features
 
@@ -45,7 +45,7 @@ Supported categories include:
 
 ### Warranty Management
 
-The system manages warranty information according to the selected product category and checks warranty validity before processing eligible service claims.
+The system manages warranty information based on the selected product category and checks warranty validity before processing eligible service claims.
 
 ### Claim Management
 
@@ -89,23 +89,23 @@ The system provides functionality to search, sort, and display product, warranty
 
 ## Project Structure
 
-├── src
-│   ├── Product.java
-│   ├── Electronics.java
-│   ├── Appliance.java
-│   ├── Gadget.java
-│   ├── Warranty.java
-│   ├── Claim.java
-│   ├── ClaimStatus.java
-│   ├── ServiceCenter.java
-│   ├── ExpiredWarrantyException.java
-│   ├── WarrantyManagementGUI.java
-│   └── Main.java
-│
-├── Detailed-Report
-│   └── Product_Warranty_and_Service_Claim_Management_System.pdf
-│
-└── README.md
+    ├── src
+    │   ├── Product.java
+    │   ├── Electronics.java
+    │   ├── Appliance.java
+    │   ├── Gadget.java
+    │   ├── Warranty.java
+    │   ├── Claim.java
+    │   ├── ClaimStatus.java
+    │   ├── ServiceCenter.java
+    │   ├── ExpiredWarrantyException.java
+    │   ├── WarrantyManagementGUI.java
+    │   └── Main.java
+    │
+    ├── Detailed-Report
+    │   └── Product_Warranty_and_Service_Claim_Management_System.pdf
+    │
+    └── README.md
 
 ## Class Responsibilities
 
@@ -157,7 +157,7 @@ Used to maintain entries in sorted key order.
 
 ## Exception Handling and Validation
 
-The project includes a custom ExpiredWarrantyException to handle situations where a service claim is attempted for a product whose warranty has expired.
+The project includes a custom `ExpiredWarrantyException` to handle situations where a service claim is attempted for a product whose warranty has expired.
 
 The application also performs validation for:
 
@@ -228,9 +228,11 @@ After the claim is validated, a repair appointment can be scheduled for a suitab
 
 ## Documentation
 
-The complete project report is available in the Detailed-Report folder.
+The detailed project report is available in the `Detailed-Report` folder.
 
-Report file: Product_Warranty_and_Service_Claim_Management_System.pdf
+Report:
+
+`Product_Warranty_and_Service_Claim_Management_System.pdf`
 
 The report contains the project introduction, objectives, modules, system design, Java concepts, implementation details, workflow, testing, advantages, future enhancements, and conclusion.
 
@@ -252,4 +254,4 @@ The project combines object-oriented programming, abstraction, inheritance, meth
 
 ## Author
 
-Sanika Kangane 👩🏻‍💻
+Sanika Kangane
