@@ -254,4 +254,4 @@ The project combines object-oriented programming, abstraction, inheritance, meth
 
 ## Author
 
-Sanika Kangane
+Sanika Kangane 👩🏻‍💻
