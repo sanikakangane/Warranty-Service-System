@@ -2,47 +2,65 @@
 
 ## Overview
 
-The Product Warranty & Service Claim Management System is a Java-based desktop application designed to manage product warranties, customer service claims, and repair appointments.
+The Product Warranty & Service Claim Management System is a Java-based desktop application designed to manage product registration, warranty information, customer service claims, and repair scheduling.
 
-The system provides a centralized way to register products, track warranty periods, create and manage service claims, schedule repairs, search records, and identify expired warranties.
+The system provides a centralized workflow for registering products, tracking warranty periods, creating service claims, scheduling repairs, searching records, and managing service information through a Java Swing graphical user interface.
 
-The project demonstrates core Java programming concepts through a practical warranty management workflow with a Java Swing graphical user interface.
+The project demonstrates core Java programming concepts including object-oriented programming, abstraction, inheritance, method overriding, collections, CRUD operations, searching, sorting, exception handling, validation, and GUI development.
 
-## Objectives
+## Features
 
-- Register products with customer and purchase details
-- Maintain product and warranty information
-- Apply category-specific warranty rules
-- Create and manage customer service claims
-- Schedule repair appointments
-- Validate warranty eligibility before processing claims
-- Identify expired warranties
-- Search and sort product and claim records
-- Perform CRUD operations on system records
-- Handle invalid input and warranty-related exceptions
-- Provide a desktop GUI using Java Swing
+- Product registration with customer and purchase details
+- Category-based warranty management
+- Warranty validity and expiry tracking
+- Customer service claim management
+- Claim status management
+- Repair appointment scheduling
+- Product and claim searching
+- Record sorting
+- CRUD operations
+- Input validation
+- Custom exception handling
+- Java Swing graphical user interface
+- Detailed project documentation
 
 ## Main Modules
 
 ### Product Registration
 
-Allows the user to register products using Product ID, Product Name, Serial Number, Purchase Date, Customer Name, and Product Category.
+Allows users to register products using:
 
-Supported categories include Electronics, Appliance, and Gadget.
+- Product ID
+- Product Name
+- Serial Number
+- Purchase Date
+- Customer Name
+- Product Category
 
-### Warranty Tracking
+Supported categories include:
 
-The system calculates and tracks warranty information based on the selected product category. Warranty validity is checked before processing eligible service claims.
+- Electronics
+- Appliance
+- Gadget
+
+### Warranty Management
+
+The system manages warranty information according to the selected product category and checks warranty validity before processing eligible service claims.
 
 ### Claim Management
 
-Customers can create service claims using Claim ID, Product ID, Issue Details, and Claim Status.
+Service claims can be created and managed using:
+
+- Claim ID
+- Product ID
+- Issue Details
+- Claim Status
 
 Each claim is associated with a registered product and can be tracked independently.
 
 ### Repair Scheduling
 
-Valid service claims can be scheduled for repair using a repair date. The repair appointment is handled separately from the original product purchase date.
+Valid service claims can be scheduled for repair using a specified repair date.
 
 ### Search and Reports
 
@@ -56,6 +74,7 @@ The system provides functionality to search, sort, and display product, warranty
 - Abstraction
 - Inheritance
 - Method Overriding
+- Encapsulation
 - ArrayList
 - LinkedList
 - HashMap
@@ -66,38 +85,44 @@ The system provides functionality to search, sort, and display product, warranty
 - Exception Handling
 - Custom Exceptions
 - Input Validation
-- Java Swing GUI
+- Java Swing
 
 ## Project Structure
 
-src/
-├── Product.java
-├── Electronics.java
-├── Appliance.java
-├── Gadget.java
-├── Warranty.java
-├── Claim.java
-├── ClaimStatus.java
-├── ServiceCenter.java
-├── ExpiredWarrantyException.java
-├── WarrantyManagementGUI.java
-└── Main.java
+Product-Warranty-and-Service-Claim-Management-System/
+├── src/
+│   ├── Product.java
+│   ├── Electronics.java
+│   ├── Appliance.java
+│   ├── Gadget.java
+│   ├── Warranty.java
+│   ├── Claim.java
+│   ├── ClaimStatus.java
+│   ├── ServiceCenter.java
+│   ├── ExpiredWarrantyException.java
+│   ├── WarrantyManagementGUI.java
+│   └── Main.java
+│
+├── Detailed-Report/
+│   └── Product_Warranty_and_Service_Claim_Management_System.pdf
+│
+└── README.md
 
 ## Class Responsibilities
 
 | Class | Responsibility |
 |---|---|
 | Product | Base class containing common product information and warranty behavior |
-| Electronics | Provides category-specific product and warranty behavior |
-| Appliance | Provides category-specific product and warranty behavior |
-| Gadget | Provides category-specific product and warranty behavior |
-| Warranty | Stores warranty-related information and expiry details |
+| Electronics | Represents electronics products and their warranty behavior |
+| Appliance | Represents appliance products and their warranty behavior |
+| Gadget | Represents gadget products and their warranty behavior |
+| Warranty | Manages warranty-related information and expiry details |
 | Claim | Represents a customer service claim |
-| ClaimStatus | Represents the current state of a service claim |
+| ClaimStatus | Represents the status of a service claim |
 | ServiceCenter | Manages products, warranties, claims, searching, sorting, and service operations |
 | ExpiredWarrantyException | Handles expired warranty conditions |
 | WarrantyManagementGUI | Provides the Java Swing graphical interface |
-| Main | Starts the application |
+| Main | Entry point used to start the application |
 
 ## System Workflow
 
@@ -106,18 +131,18 @@ src/
 3. Enter product and customer details.
 4. Select the product category.
 5. Register the product.
-6. Calculate the applicable warranty information.
-7. File a service claim when required.
+6. Calculate and track the applicable warranty.
+7. Create a service claim when required.
 8. Validate the warranty and claim details.
 9. Schedule a repair appointment for a valid claim.
 10. Search or sort records when required.
-11. View service and warranty information.
+11. View the required service and warranty information.
 
 ## Data Structures
 
 ### ArrayList
 
-Used to maintain expandable collections of products and claims.
+Used to maintain collections of products and claims.
 
 ### LinkedList
 
@@ -125,7 +150,7 @@ Used for sequential claim history and related operations.
 
 ### HashMap
 
-Used for fast lookup using keys such as Product ID.
+Used for fast lookup of product or warranty information using keys such as Product ID.
 
 ### TreeMap
 
@@ -133,9 +158,9 @@ Used to maintain entries in sorted key order.
 
 ## Exception Handling and Validation
 
-The project includes a custom ExpiredWarrantyException to handle situations where a service claim is attempted after the warranty has expired.
+The project includes a custom ExpiredWarrantyException to handle situations where a service claim is attempted for a product whose warranty has expired.
 
-The system also validates:
+The application also performs validation for:
 
 - Required product information
 - Date formats
@@ -143,46 +168,43 @@ The system also validates:
 - Warranty eligibility
 - Invalid input
 
-User-friendly validation messages are displayed through the GUI.
-
 ## CRUD Operations
 
-| Operation | Use in System |
+| Operation | Purpose |
 |---|---|
-| Create | Register a product or create a service claim |
-| Read | Display product, warranty, and claim records |
-| Update | Modify relevant service information |
+| Create | Register products and create service claims |
+| Read | Display product, warranty, and claim information |
+| Update | Modify relevant records |
 | Delete | Remove records when required |
 
 ## Graphical User Interface
 
-The application uses Java Swing to provide a desktop interface with three main functional areas:
+The application is developed using Java Swing and provides three main functional areas:
 
 - Product & Warranty
 - Claims & Repair
 - Search & Reports
 
-The interface provides forms for entering product and claim information, action buttons for performing operations, and areas for displaying system results.
+The interface provides input fields, selection controls, action buttons, and result areas for interacting with the system.
 
 ## Sample Scenario
 
-A customer purchases a laptop and registers it in the system with the following information:
+A customer purchases a laptop and registers it with the following details:
 
-Product ID: P101
-Product Name: Laptop
-Serial Number: SN-LAP-101
-Purchase Date: 2026-01-07
-Customer: Aarav
-Category: Electronics
+- Product ID: P101
+- Product Name: Laptop
+- Serial Number: SN-LAP-101
+- Purchase Date: 2026-01-07
+- Customer: Aarav
+- Category: Electronics
 
-A service claim can then be created:
+A service claim can then be created using:
 
-Claim ID: C001
-Issue: Laptop screen is not working
+- Claim ID: C001
+- Product ID: P101
+- Issue: Laptop screen is not working
 
-After the claim is validated, a repair appointment can be scheduled:
-
-Repair Date: 2026-01-10
+After the claim is validated, a repair appointment can be scheduled for a suitable repair date.
 
 ## Testing
 
@@ -197,38 +219,37 @@ Repair Date: 2026-01-10
 | Clear operation | Input fields are reset |
 | Sorting | Records are displayed in sorted order |
 
-## Advantages
+## Technology Stack
 
-- Centralizes product, warranty, and service claim information
-- Reduces manual tracking of warranty periods
-- Makes claim records easier to search and manage
-- Supports category-specific warranty rules
-- Improves reliability through validation and exception handling
-- Provides a simple desktop GUI
-- Demonstrates multiple core Java concepts in one practical application
+- Language: Java
+- GUI Framework: Java Swing
+- Application Type: Desktop Application
+- Data Structures: ArrayList, LinkedList, HashMap, TreeMap
+- Documentation: PDF
+
+## Documentation
+
+The complete project report is available in the Detailed-Report folder.
+
+Report file: Product_Warranty_and_Service_Claim_Management_System.pdf
+
+The report contains the project introduction, objectives, modules, system design, Java concepts, implementation details, workflow, testing, advantages, future enhancements, and conclusion.
 
 ## Future Enhancements
 
 - Database integration using MySQL or PostgreSQL
-- Customer and service-center staff login
+- Customer and service-center staff authentication
 - Automatic warranty expiry notifications
 - Email or SMS notifications for repair appointments
 - Downloadable service reports
 - Dashboard for active claims, completed repairs, and expired warranties
 - Role-based access control
 
-## Technology Stack
-
-- Language: Java
-- GUI: Java Swing
-- Application Type: Desktop GUI Application
-- Programming Concepts: OOP, Collections, CRUD, Searching, Sorting, Exception Handling, and Validation
-
 ## Conclusion
 
-The Product Warranty & Service Claim Management System demonstrates how Java can be used to develop a practical warranty and service management application.
+The Product Warranty & Service Claim Management System demonstrates the practical application of Java programming concepts in a real-world warranty and service management scenario.
 
-The project combines object-oriented programming, abstraction, inheritance, method overriding, Java collections, CRUD operations, searching, sorting, validation, exception handling, and Swing GUI development to provide a structured workflow for product registration, warranty tracking, claim management, and repair scheduling.
+The project combines object-oriented programming, abstraction, inheritance, method overriding, collections, CRUD operations, searching, sorting, validation, exception handling, and Java Swing to provide a structured system for product registration, warranty management, service claims, and repair scheduling.
 
 ## Author
 
