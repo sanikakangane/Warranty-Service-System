@@ -89,8 +89,7 @@ The system provides functionality to search, sort, and display product, warranty
 
 ## Project Structure
 
-Warranty-Service-System/
-├── src/
+├── src
 │   ├── Product.java
 │   ├── Electronics.java
 │   ├── Appliance.java
@@ -102,8 +101,10 @@ Warranty-Service-System/
 │   ├── ExpiredWarrantyException.java
 │   ├── WarrantyManagementGUI.java
 │   └── Main.java
-├── Detailed-Report/
+│
+├── Detailed-Report
 │   └── Product_Warranty_and_Service_Claim_Management_System.pdf
+│
 └── README.md
 
 ## Class Responsibilities
